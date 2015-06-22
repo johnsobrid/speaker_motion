@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F08E5421B37A190008F0F86 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F08E5411B37A190008F0F86 /* SettingsViewController.swift */; };
 		4FB935461B3396A500BCF151 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB935451B3396A500BCF151 /* AppDelegate.swift */; };
 		4FB935481B3396A600BCF151 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4FB935471B3396A600BCF151 /* GameScene.sks */; };
 		4FB9354A1B3396A600BCF151 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB935491B3396A600BCF151 /* GameScene.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F08E5411B37A190008F0F86 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4FB935401B3396A500BCF151 /* speaker_motion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = speaker_motion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FB935441B3396A500BCF151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FB935451B3396A500BCF151 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				4FB9354B1B3396A600BCF151 /* GameViewController.swift */,
 				4FB9356B1B33AE9100BCF151 /* InteractionBall.swift */,
 				4FB9354D1B3396A600BCF151 /* Main.storyboard */,
+				4F08E5411B37A190008F0F86 /* SettingsViewController.swift */,
 				4FB935501B3396A600BCF151 /* Images.xcassets */,
 				4FB935521B3396A600BCF151 /* LaunchScreen.xib */,
 				4FB935431B3396A500BCF151 /* Supporting Files */,
@@ -225,6 +228,7 @@
 				4FB9354A1B3396A600BCF151 /* GameScene.swift in Sources */,
 				4FB9356C1B33AE9200BCF151 /* InteractionBall.swift in Sources */,
 				4FB9354C1B3396A600BCF151 /* GameViewController.swift in Sources */,
+				4F08E5421B37A190008F0F86 /* SettingsViewController.swift in Sources */,
 				4FB935461B3396A500BCF151 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

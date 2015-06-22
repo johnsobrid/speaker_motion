@@ -19,16 +19,18 @@ class GameScene: SKScene {
    
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
+      
+      
       InterZone.size = CGSizeMake(self.size.width*0.280, self.size.height/2)
       InterZone.anchorPoint = CGPointZero
       InterZone.position = CGPointMake(self.size.width * 0.220, 0.0)
      
-      InterZone.zPosition = 1000
+      InterZone.zPosition = 1
       InterZone.name = "zoneName"
       addChild(InterZone)
       
-      ball.position = CGPointMake(100  , 100)
-      ball.zPosition = -100
+      ball.position = CGPointMake(CGRectGetMidX(InterZone.frame) , CGRectGetMidY(InterZone.frame))
+      ball.zPosition = 2
       ball.name = "ballName"
       addChild(ball)
    }
@@ -37,6 +39,7 @@ class GameScene: SKScene {
       override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
          var touch = touches.first as! UITouch
          var touchLocation = touch.locationInNode(self)
+
          
          let touchedNode = self.nodeAtPoint(touchLocation)
          
@@ -53,16 +56,16 @@ class GameScene: SKScene {
       if isfingerOnBall {
          // 2. Get touch location
          var touch = touches.first as! UITouch
-         var touchLocation = touch.locationInNode(InterZone)
+         var touchLocation = touch.locationInNode(self)
          var previousLocation = touch.previousLocationInNode(self)
+
          
          // 3. Get node for ball
          if let ball = childNodeWithName("ballName") as? SKSpriteNode {
-            
          // 4. Calculate new position along x for paddle
-         var ballX = ball.position.x + (touchLocation.x - previousLocation.x)
-         var ballY = ball.position.y + (touchLocation.y - previousLocation.y)
-         
+            var ballX = ball.position.x + (touchLocation.x - previousLocation.x)
+            var ballY = ball.position.y + (touchLocation.y - previousLocation.y)
+            
          // 5. Limit x so that paddle won't leave screen to left or right
          ballX = max(ballX, ball.size.width/2)
          ballX = min(ballX, size.width - ball.size.width/2)
@@ -70,6 +73,7 @@ class GameScene: SKScene {
          ballY = min(ballY, size.height - ball.size.height/2)
          // 6. Update paddle position
          ball.position = CGPointMake(ballX, ballY)
+
          }
       }
    }
