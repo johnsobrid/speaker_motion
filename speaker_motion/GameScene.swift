@@ -8,9 +8,24 @@
 
 import SpriteKit
 
+public var manualIP = String()
+public var manualPort = Int()
+
 class GameScene: SKScene {
    
-  
+   var manual_IP: String = "" {
+      didSet {
+         manualIP = manual_IP
+      }
+   }
+   
+   var manual_Port: String = "" {
+      didSet {
+         manualPort = manual_Port.toInt()!
+         
+      }
+   }
+
    
    let InterZone = SKSpriteNode(imageNamed: "InteractionArea")
    let ball: InteractionBall = InteractionBall()
@@ -23,8 +38,8 @@ class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
       
-      newOutPort = newManager.createNewOutputToAddress("169.254.177.20" , atPort: 12000, withLabel: "Outport")
       
+      newOutPort = newManager.createNewOutputToAddress(manualIP, atPort:Int32(manualPort), withLabel: "OutPort")
       
       InterZone.size = CGSizeMake(self.size.width*0.280, self.size.height/2)
       InterZone.anchorPoint = CGPointZero
@@ -63,19 +78,19 @@ class GameScene: SKScene {
          var touch = touches.first as! UITouch
          var touchLocation = touch.locationInNode(self)
          var previousLocation = touch.previousLocationInNode(self)
-
          
          // 3. Get node for ball
          if let ball = childNodeWithName("ballName") as? SKSpriteNode {
-         // 4. Calculate new position along x for paddle
-            var ballX = ball.position.x + (touchLocation.x - previousLocation.x)
-            var ballY = ball.position.y + (touchLocation.y - previousLocation.y)
+         // 4. Calculate new position along x for ball
+         var ballX = ball.position.x + (touchLocation.x - previousLocation.x)
+         var ballY = ball.position.y + (touchLocation.y - previousLocation.y)
             
-         // 5. Limit x so that paddle won't leave screen to left or right
+         // 5. Limit x and y so that ball won't leave screen to left or right
          ballX = max(ballX, ball.size.width/2)
-         ballX = min(ballX, size.width - ball.size.width/2)
+         ballX = min(ballX, size.width/2 - ball.size.width/2)
+            
          ballY = max(ballY, ball.size.height/2)
-         ballY = min(ballY, size.height - ball.size.height/2)
+         ballY = min(ballY, InterZone.size.height - ball.size.height/2)
          // 6. Update paddle position
          ball.position = CGPointMake(ballX, ballY)
          sendOSC(Float(ballX), yPos: Float(ballY))

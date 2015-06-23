@@ -9,6 +9,8 @@
 import UIKit
 import SpriteKit
 
+
+
 extension SKNode {
     class func unarchiveFromFile(file : String) -> SKNode? {
         if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
@@ -26,6 +28,19 @@ extension SKNode {
 }
 
 class GameViewController: UIViewController {
+   
+   var manual_IP: String = "" {
+      didSet {
+        
+      }
+   }
+   
+   var manual_Port: String = "" {
+      didSet {
+         
+      }
+   }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +50,15 @@ class GameViewController: UIViewController {
             let skView = self.view as! SKView
             skView.showsFPS = false
             skView.showsNodeCount = false
+         
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .AspectFill
+            scene.manual_IP = manual_IP
+            scene.manual_Port = manual_Port
             
             skView.presentScene(scene)
         }

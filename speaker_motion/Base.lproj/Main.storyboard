@@ -52,12 +52,17 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="connectPressed:" destination="vd8-a0-u1G" eventType="touchUpInside" id="cWy-o0-UJ4"/>
                                     <segue destination="BV1-FR-VrT" kind="show" identifier="connect" id="ojA-xF-cHb"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="IPfield" destination="JWn-IS-SRM" id="4pK-NX-ZcV"/>
+                        <outlet property="portField" destination="nxd-kI-2EI" id="tCj-aV-NlI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKv-8U-Uz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
