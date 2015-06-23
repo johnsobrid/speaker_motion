@@ -16,9 +16,14 @@ class GameScene: SKScene {
    let ball: InteractionBall = InteractionBall()
    var isfingerOnBall = false
    
+   var newManager = OSCManager()
+   var newOutPort = OSCOutPort()
+   
    
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
+      
+      newOutPort = newManager.createNewOutputToAddress("169.254.177.20" , atPort: 12000, withLabel: "Outport")
       
       
       InterZone.size = CGSizeMake(self.size.width*0.280, self.size.height/2)
@@ -73,6 +78,7 @@ class GameScene: SKScene {
          ballY = min(ballY, size.height - ball.size.height/2)
          // 6. Update paddle position
          ball.position = CGPointMake(ballX, ballY)
+         sendOSC(Float(ballX), yPos: Float(ballY))
 
          }
       }
@@ -85,4 +91,13 @@ class GameScene: SKScene {
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
     }
+   
+   
+   func sendOSC(xPos: Float, yPos: Float) {
+      let newMsg: OSCMessage = OSCMessage(address: "/test")
+      newMsg.addFloat(xPos)
+      newMsg.addFloat(yPos)
+      newOutPort.sendThisMessage(newMsg)
+
+   }
 }

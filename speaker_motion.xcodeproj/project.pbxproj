@@ -17,6 +17,8 @@
 		4FB935541B3396A600BCF151 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB935521B3396A600BCF151 /* LaunchScreen.xib */; };
 		4FB935601B3396A600BCF151 /* speaker_motionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9355F1B3396A600BCF151 /* speaker_motionTests.swift */; };
 		4FB9356C1B33AE9200BCF151 /* InteractionBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9356B1B33AE9100BCF151 /* InteractionBall.swift */; };
+		4FF2E9471B38C1E6002BCBAB /* libVVBasics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF2E9361B38C1CF002BCBAB /* libVVBasics.a */; };
+		4FF2E9481B38C1E6002BCBAB /* libVVOSC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF2E9381B38C1CF002BCBAB /* libVVOSC.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,167 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4FB9353F1B3396A500BCF151;
 			remoteInfo = speaker_motion;
+		};
+		4FF2E9191B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 961EA8ED100E8565007E6C25;
+			remoteInfo = VVBasics;
+		};
+		4FF2E91B1B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96C8073A19817C1600FA7825;
+			remoteInfo = VVBufferPool;
+		};
+		4FF2E91D1B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96C8071219817BFE00FA7825;
+			remoteInfo = DDMathParser;
+		};
+		4FF2E91F1B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96C8072619817C0A00FA7825;
+			remoteInfo = JSONKit;
+		};
+		4FF2E9211B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 964FF27D1981B5AF00CCC808;
+			remoteInfo = VVISFKit;
+		};
+		4FF2E9231B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96B06C1C18BE0ECF000A921C;
+			remoteInfo = VVUIToolbox;
+		};
+		4FF2E9251B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 961745F4100F86B400FB60E6;
+			remoteInfo = VVMIDI;
+		};
+		4FF2E9271B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9628D0C5100E89F700C3944E;
+			remoteInfo = VVOSC;
+		};
+		4FF2E9291B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 968FAA86108B6141000E470D;
+			remoteInfo = CrashReporterTestApp;
+		};
+		4FF2E92B1B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9656D900100F89BA0064EEA6;
+			remoteInfo = MIDITestApp;
+		};
+		4FF2E92D1B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9628D179100E8B4D00C3944E;
+			remoteInfo = OSCTestApp;
+		};
+		4FF2E92F1B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96B49302106AEB4C008FB26E;
+			remoteInfo = MIDIviaOSC;
+		};
+		4FF2E9311B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 966CCBD81431EFB9006D580F;
+			remoteInfo = OSCQueryTest;
+		};
+		4FF2E9331B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96ACD7211706416300138AE6;
+			remoteInfo = OSCPingTester;
+		};
+		4FF2E9351B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96C18C2D185A1A740082DE35;
+			remoteInfo = VVBasicsStatic;
+		};
+		4FF2E9371B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96C18C3E185A1A7D0082DE35;
+			remoteInfo = VVOSCStatic;
+		};
+		4FF2E9391B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1A6F726619033A9D00A6FBAD;
+			remoteInfo = VVUIToolboxStatic;
+		};
+		4FF2E93B1B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 965C1CAC1983BE7D00111741;
+			remoteInfo = "GLScene Test App";
+		};
+		4FF2E93D1B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 965C1CC71983BE9A00111741;
+			remoteInfo = "QCGLScene Test App";
+		};
+		4FF2E93F1B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 965C1CE21983BEA200111741;
+			remoteInfo = "CIGLScene Test App";
+		};
+		4FF2E9411B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 965C1CFD198403C300111741;
+			remoteInfo = "ISFGLScene Test App";
+		};
+		4FF2E9431B38C1CF002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96140109198AD46D00335292;
+			remoteInfo = "QT and Hap Test App";
+		};
+		4FF2E9451B38C1D8002BCBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 968A7EEB185BA3100075DEB1;
+			remoteInfo = "Build iOS static libs";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -44,6 +207,8 @@
 		4FB9355E1B3396A600BCF151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FB9355F1B3396A600BCF151 /* speaker_motionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speaker_motionTests.swift; sourceTree = "<group>"; };
 		4FB9356B1B33AE9100BCF151 /* InteractionBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionBall.swift; sourceTree = "<group>"; };
+		4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VVOpenSource.xcodeproj; path = "../../vvopensource-master/VVOpenSource.xcodeproj"; sourceTree = "<group>"; };
+		4FF2E94A1B38C2BF002BCBAB /* speaker_motion-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "speaker_motion-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +216,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FF2E9471B38C1E6002BCBAB /* libVVBasics.a in Frameworks */,
+				4FF2E9481B38C1E6002BCBAB /* libVVOSC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +237,7 @@
 				4FB935421B3396A500BCF151 /* speaker_motion */,
 				4FB9355C1B3396A600BCF151 /* speaker_motionTests */,
 				4FB935411B3396A500BCF151 /* Products */,
+				4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				4FB935441B3396A500BCF151 /* Info.plist */,
+				4FF2E94A1B38C2BF002BCBAB /* speaker_motion-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -124,6 +293,35 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4FF2E8FE1B38C1CE002BCBAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4FF2E91A1B38C1CF002BCBAB /* VVBasics.framework */,
+				4FF2E91C1B38C1CF002BCBAB /* VVBufferPool.framework */,
+				4FF2E91E1B38C1CF002BCBAB /* DDMathParser.framework */,
+				4FF2E9201B38C1CF002BCBAB /* JSONKit.framework */,
+				4FF2E9221B38C1CF002BCBAB /* VVISFKit.framework */,
+				4FF2E9241B38C1CF002BCBAB /* VVUIToolbox.framework */,
+				4FF2E9261B38C1CF002BCBAB /* VVMIDI.framework */,
+				4FF2E9281B38C1CF002BCBAB /* VVOSC.framework */,
+				4FF2E92A1B38C1CF002BCBAB /* CrashReporterTestApp.app */,
+				4FF2E92C1B38C1CF002BCBAB /* MIDITestApp.app */,
+				4FF2E92E1B38C1CF002BCBAB /* OSCTestApp.app */,
+				4FF2E9301B38C1CF002BCBAB /* MIDIviaOSC.app */,
+				4FF2E9321B38C1CF002BCBAB /* OSCQueryTest.app */,
+				4FF2E9341B38C1CF002BCBAB /* OSCPingTester.app */,
+				4FF2E9361B38C1CF002BCBAB /* libVVBasics.a */,
+				4FF2E9381B38C1CF002BCBAB /* libVVOSC.a */,
+				4FF2E93A1B38C1CF002BCBAB /* libVVUIToolbox.a */,
+				4FF2E93C1B38C1CF002BCBAB /* GLScene Test App.app */,
+				4FF2E93E1B38C1CF002BCBAB /* QCGLScene Test App.app */,
+				4FF2E9401B38C1CF002BCBAB /* CIGLScene Test App.app */,
+				4FF2E9421B38C1CF002BCBAB /* ISFGLScene Test App.app */,
+				4FF2E9441B38C1CF002BCBAB /* QT and Hap Test App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +336,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4FF2E9461B38C1D8002BCBAB /* PBXTargetDependency */,
 			);
 			name = speaker_motion;
 			productName = speaker_motion;
@@ -191,6 +390,12 @@
 			mainGroup = 4FB935371B3396A400BCF151;
 			productRefGroup = 4FB935411B3396A500BCF151 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4FF2E8FE1B38C1CE002BCBAB /* Products */;
+					ProjectRef = 4FF2E8FD1B38C1CE002BCBAB /* VVOpenSource.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4FB9353F1B3396A500BCF151 /* speaker_motion */,
@@ -198,6 +403,163 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4FF2E91A1B38C1CF002BCBAB /* VVBasics.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VVBasics.framework;
+			remoteRef = 4FF2E9191B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E91C1B38C1CF002BCBAB /* VVBufferPool.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VVBufferPool.framework;
+			remoteRef = 4FF2E91B1B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E91E1B38C1CF002BCBAB /* DDMathParser.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DDMathParser.framework;
+			remoteRef = 4FF2E91D1B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E9201B38C1CF002BCBAB /* JSONKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSONKit.framework;
+			remoteRef = 4FF2E91F1B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E9221B38C1CF002BCBAB /* VVISFKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VVISFKit.framework;
+			remoteRef = 4FF2E9211B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E9241B38C1CF002BCBAB /* VVUIToolbox.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VVUIToolbox.framework;
+			remoteRef = 4FF2E9231B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E9261B38C1CF002BCBAB /* VVMIDI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VVMIDI.framework;
+			remoteRef = 4FF2E9251B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E9281B38C1CF002BCBAB /* VVOSC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VVOSC.framework;
+			remoteRef = 4FF2E9271B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E92A1B38C1CF002BCBAB /* CrashReporterTestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = CrashReporterTestApp.app;
+			remoteRef = 4FF2E9291B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E92C1B38C1CF002BCBAB /* MIDITestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = MIDITestApp.app;
+			remoteRef = 4FF2E92B1B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E92E1B38C1CF002BCBAB /* OSCTestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OSCTestApp.app;
+			remoteRef = 4FF2E92D1B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E9301B38C1CF002BCBAB /* MIDIviaOSC.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = MIDIviaOSC.app;
+			remoteRef = 4FF2E92F1B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E9321B38C1CF002BCBAB /* OSCQueryTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OSCQueryTest.app;
+			remoteRef = 4FF2E9311B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E9341B38C1CF002BCBAB /* OSCPingTester.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OSCPingTester.app;
+			remoteRef = 4FF2E9331B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E9361B38C1CF002BCBAB /* libVVBasics.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVVBasics.a;
+			remoteRef = 4FF2E9351B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E9381B38C1CF002BCBAB /* libVVOSC.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVVOSC.a;
+			remoteRef = 4FF2E9371B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E93A1B38C1CF002BCBAB /* libVVUIToolbox.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVVUIToolbox.a;
+			remoteRef = 4FF2E9391B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E93C1B38C1CF002BCBAB /* GLScene Test App.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "GLScene Test App.app";
+			remoteRef = 4FF2E93B1B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E93E1B38C1CF002BCBAB /* QCGLScene Test App.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "QCGLScene Test App.app";
+			remoteRef = 4FF2E93D1B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E9401B38C1CF002BCBAB /* CIGLScene Test App.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "CIGLScene Test App.app";
+			remoteRef = 4FF2E93F1B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E9421B38C1CF002BCBAB /* ISFGLScene Test App.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "ISFGLScene Test App.app";
+			remoteRef = 4FF2E9411B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FF2E9441B38C1CF002BCBAB /* QT and Hap Test App.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "QT and Hap Test App.app";
+			remoteRef = 4FF2E9431B38C1CF002BCBAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4FB9353E1B3396A500BCF151 /* Resources */ = {
@@ -248,6 +610,11 @@
 			isa = PBXTargetDependency;
 			target = 4FB9353F1B3396A500BCF151 /* speaker_motion */;
 			targetProxy = 4FB9355A1B3396A600BCF151 /* PBXContainerItemProxy */;
+		};
+		4FF2E9461B38C1D8002BCBAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Build iOS static libs";
+			targetProxy = 4FF2E9451B38C1D8002BCBAB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -358,9 +725,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = speaker_motion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "speaker_motion/speaker_motion-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -368,9 +739,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = speaker_motion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "speaker_motion/speaker_motion-Bridging-Header.h";
 			};
 			name = Release;
 		};
