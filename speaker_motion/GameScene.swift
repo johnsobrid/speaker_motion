@@ -49,13 +49,15 @@ class GameScene: SKScene {
       
       for i in 0...4 {
          let InterZone = SKSpriteNode(imageNamed: "InteractionArea")
-         
-         InterZone.size = CGSizeMake(self.size.width*0.280, self.size.height/2)
          InterZone.anchorPoint = CGPointZero
+         InterZone.size = CGSizeMake(scene!.size.width/2, scene!.size.height/2)
+         println(scene!.size.height)
+         println(scene!.size.width)
+        
     
-
          if (i == 0) {
-         InterZone.position = CGPointMake(self.size.width * 0.220, self.size.height/2)
+            InterZone.position = CGPointMake(self.frame.origin.x, self.size.height/2)
+            println(InterZone.position)
             var newString = "zoneName\(i)"
             InterZone.name = newString
             addChild(InterZone)
@@ -67,13 +69,13 @@ class GameScene: SKScene {
             addChild(InterZone)
 
          } else if (i == 2) {
-            InterZone.position = CGPointMake(self.size.width/2, 0.0)
+            InterZone.position = CGPointMake(self.size.width/2, self.frame.origin.y)
             var newString = "zoneName\(i)"
             InterZone.name = newString
             addChild(InterZone)
 
          } else if (i == 3) {
-            InterZone.position = CGPointMake(self.size.width * 0.220, 0.0)
+            InterZone.position = CGPointMake(self.frame.origin.x, self.frame.origin.y)
             var newString = "zoneName\(i)"
             InterZone.name = newString
             addChild(InterZone)
@@ -158,6 +160,8 @@ func initBalls() {
             //if you are in the top two zones limit y
             if (i == 0 || i == 1) {
                
+               println(ballX)
+               
                if (ballY < self.frame.size.height/2)
                {
                   ballY = self.frame.size.height/2 - ball.size.height/2
@@ -215,7 +219,7 @@ func initBalls() {
       var zoneCentreY = CGRectGetMidY(interArray[id].frame)
       var newPosX = ballArray[id].position.x
       var newPosY = ballArray[id].position.y
-      println(ballArray[id].position)
+   //   println(ballArray[id].position)
       // first calculate as x and y but scale to your own zone
       if (id == 0 || id == 1) {
       newPosY = newPosY - size.height/2
@@ -223,7 +227,6 @@ func initBalls() {
       if (id == 1 || id == 2) {
          newPosX = newPosX - size.width/2
       }
-      println(newPosX)
      //next convert as if the centre of your zone was the centre of the coordinate system
       newPosX = newPosX - (size.width/4)
       newPosY = newPosY - (size.height/4)

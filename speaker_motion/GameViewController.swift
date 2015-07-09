@@ -42,21 +42,24 @@ class GameViewController: UIViewController {
    }
 
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+   override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews() 
 
         if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
             // Configure the view.
             let skView = self.view as! SKView
+            skView.frame = self.view.frame
+         
             skView.showsFPS = false
             skView.showsNodeCount = false
          
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
-            
-            /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .AspectFill
+        
+         scene.size = skView.bounds.size
+         scene.anchorPoint = CGPointMake(0.0, 0.0)
+            scene.scaleMode = SKSceneScaleMode.AspectFill
             scene.manual_IP = manual_IP
             scene.manual_Port = manual_Port
             
@@ -65,7 +68,7 @@ class GameViewController: UIViewController {
     }
 
     override func shouldAutorotate() -> Bool {
-        return true
+        return false
     }
 
     override func supportedInterfaceOrientations() -> Int {
