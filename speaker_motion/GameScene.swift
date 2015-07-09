@@ -52,6 +52,7 @@ class GameScene: SKScene {
          
          InterZone.size = CGSizeMake(self.size.width*0.280, self.size.height/2)
          InterZone.anchorPoint = CGPointZero
+    
 
          if (i == 0) {
          InterZone.position = CGPointMake(self.size.width * 0.220, self.size.height/2)
@@ -178,7 +179,9 @@ func initBalls() {
             
          // 6. Update paddle position
          ball.position = CGPointMake(ballX, ballY)
+            //don't send OSC yet -- just send it to the corrdinate conversion functions
          sendOSC(Float(ball.position.x), yPos: Float(ball.position.y))
+            scaleToOwnZone(i)
          }
          }
       }
@@ -204,5 +207,40 @@ func initBalls() {
       newMsg.addFloat(yPos)
       newOutPort.sendThisMessage(newMsg)
 
+   }
+   
+   func scaleToOwnZone(id: Int) {
+      //scale differently depending on your id
+      var zoneCentreX = CGRectGetMidX(interArray[id].frame)
+      var zoneCentreY = CGRectGetMidY(interArray[id].frame)
+      var newPosX = ballArray[id].position.x
+      var newPosY = ballArray[id].position.y
+      println(ballArray[id].position)
+      // first calculate as x and y but scale to your own zone
+      if (id == 0 || id == 1) {
+      newPosY = newPosY - size.height/2
+      }
+      if (id == 1 || id == 2) {
+         newPosX = newPosX - size.width/2
+      }
+      println(newPosX)
+     //next convert as if the centre of your zone was the centre of the coordinate system
+      newPosX = newPosX - (size.width/4)
+      newPosY = newPosY - (size.height/4)
+      
+      println(newPosX)
+      println(newPosY)
+      //then convert to call for a polar conversion
+      
+      //send these out over OSC
+   }
+   
+   func getD(x: CGFloat, y: CGFloat) {
+      
+      return
+   }
+   
+   func getTheta(x: CGFloat, y: CGFloat) {
+      return
    }
 }
