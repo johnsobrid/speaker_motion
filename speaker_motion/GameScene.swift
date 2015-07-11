@@ -51,10 +51,7 @@ class GameScene: SKScene {
          let InterZone = SKSpriteNode(imageNamed: "InteractionArea")
          InterZone.anchorPoint = CGPointZero
          InterZone.size = CGSizeMake(scene!.size.width/2, scene!.size.height/2)
-         println(scene!.size.height)
-         println(scene!.size.width)
-        
-    
+
          if (i == 0) {
             InterZone.position = CGPointMake(self.frame.origin.x, self.size.height/2)
             println(InterZone.position)
@@ -184,7 +181,6 @@ func initBalls() {
          // 6. Update paddle position
          ball.position = CGPointMake(ballX, ballY)
             //don't send OSC yet -- just send it to the corrdinate conversion functions
-         sendOSC(Float(ball.position.x), yPos: Float(ball.position.y))
             scaleToOwnZone(i)
          }
          }
@@ -205,10 +201,10 @@ func initBalls() {
     }
    
    
-   func sendOSC(xPos: Float, yPos: Float) {
-      let newMsg: OSCMessage = OSCMessage(address: "/test")
-      newMsg.addFloat(xPos)
-      newMsg.addFloat(yPos)
+   func sendOSC(id: Int, distance: Float, angle: Float) {
+      let newMsg: OSCMessage = OSCMessage(address: "/speaker\(id)")
+      newMsg.addFloat(distance)
+      newMsg.addFloat(angle)
       newOutPort.sendThisMessage(newMsg)
 
    }
@@ -230,20 +226,18 @@ func initBalls() {
      //next convert as if the centre of your zone was the centre of the coordinate system
       newPosX = newPosX - (size.width/4)
       newPosY = newPosY - (size.height/4)
-      
-      println(newPosX)
-      println(newPosY)
+
       //then convert to call for a polar conversion
-      
+      var d = sqrtf(Float(newPosX) * Float(newPosX) + Float(newPosY) * Float(newPosY))
+      d = d/Float(size.width/4)
+      var theta = atan2f(Float(newPosY),Float(newPosX));
+      if (theta < 0.0)
+      {
+         theta = theta + Float(M_PI * 2)
+      }
       //send these out over OSC
+      sendOSC(id, distance: d, angle: theta)
+     
    }
    
-   func getD(x: CGFloat, y: CGFloat) {
-      
-      return
-   }
-   
-   func getTheta(x: CGFloat, y: CGFloat) {
-      return
-   }
 }
