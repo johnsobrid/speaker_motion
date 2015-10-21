@@ -21,7 +21,7 @@ class GameScene: SKScene {
    
    var manual_Port: String = "" {
       didSet {
-         manualPort = manual_Port.toInt()!
+         manualPort = Int(manual_Port)!
          
       }
    }
@@ -54,26 +54,26 @@ class GameScene: SKScene {
 
          if (i == 0) {
             InterZone.position = CGPointMake(self.frame.origin.x, self.size.height/2)
-            println(InterZone.position)
-            var newString = "zoneName\(i)"
+            print(InterZone.position)
+            let newString = "zoneName\(i)"
             InterZone.name = newString
             addChild(InterZone)
 
          } else if (i == 1) {
             InterZone.position = CGPointMake(self.size.width/2, self.size.height/2)
-            var newString = "zoneName\(i)"
+            let newString = "zoneName\(i)"
             InterZone.name = newString
             addChild(InterZone)
 
          } else if (i == 2) {
             InterZone.position = CGPointMake(self.size.width/2, self.frame.origin.y)
-            var newString = "zoneName\(i)"
+            let newString = "zoneName\(i)"
             InterZone.name = newString
             addChild(InterZone)
 
          } else if (i == 3) {
             InterZone.position = CGPointMake(self.frame.origin.x, self.frame.origin.y)
-            var newString = "zoneName\(i)"
+            let newString = "zoneName\(i)"
             InterZone.name = newString
             addChild(InterZone)
          }
@@ -88,7 +88,7 @@ func initBalls() {
       let ball: InteractionBall = InteractionBall()
       ball.position = CGPointMake(CGRectGetMidX(interArray[i].frame) , CGRectGetMidY(interArray[i].frame))
       ball.zPosition = 2
-      var newString = "ballName\(i)"
+      let newString = "ballName\(i)"
       ball.name = newString
       addChild(ball)
       ballArray.append(ball)
@@ -97,9 +97,9 @@ func initBalls() {
 }
     
    
-      override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-         var touch = touches.first as! UITouch
-         var touchLocation = touch.locationInNode(self)
+      override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+         let touch = touches.first! as UITouch
+         let touchLocation = touch.locationInNode(self)
 
          
          let touchedNode = self.nodeAtPoint(touchLocation)
@@ -107,7 +107,7 @@ func initBalls() {
          if let name = touchedNode.name
          {
             for i in 0...3 {
-            var newString = "ballName\(i)"
+            let newString = "ballName\(i)"
             if name == newString
             {
               isfingerOnBall[i] = true
@@ -115,14 +115,14 @@ func initBalls() {
             }
          }
    }
-   override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+   override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
       // 1. Check whether user touched the ball
       for i in 0...3 {
       if isfingerOnBall[i] {
          // 2. Get touch location
-         var touch = touches.first as! UITouch
-         var touchLocation = touch.locationInNode(self)
-         var previousLocation = touch.previousLocationInNode(self)
+         let touch = touches.first! as UITouch
+         let touchLocation = touch.locationInNode(self)
+         let previousLocation = touch.previousLocationInNode(self)
          
          // 3. Get node for ball
          if let ball = childNodeWithName("ballName\(i)") as? SKSpriteNode {
@@ -157,8 +157,6 @@ func initBalls() {
             //if you are in the top two zones limit y
             if (i == 0 || i == 1) {
                
-               println(ballX)
-               
                if (ballY < self.frame.size.height/2)
                {
                   ballY = self.frame.size.height/2 - ball.size.height/2
@@ -187,7 +185,7 @@ func initBalls() {
       }
    }
    
-   override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+   override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
       for i in 0...3 {
          if isfingerOnBall[i]
          {
@@ -211,8 +209,8 @@ func initBalls() {
    
    func scaleToOwnZone(id: Int) {
       //scale differently depending on your id
-      var zoneCentreX = CGRectGetMidX(interArray[id].frame)
-      var zoneCentreY = CGRectGetMidY(interArray[id].frame)
+      _ = CGRectGetMidX(interArray[id].frame)
+      _ = CGRectGetMidY(interArray[id].frame)
       var newPosX = ballArray[id].position.x
       var newPosY = ballArray[id].position.y
    //   println(ballArray[id].position)

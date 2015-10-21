@@ -37,8 +37,8 @@ class SettingsViewController: UIViewController {
     
 
    @IBAction func connectPressed(sender: UIButton) {
-      ipString = IPfield.text
-      portString = portField.text
+      ipString = IPfield.text!
+      portString = portField.text!
    }
      override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
       if let identifier = segue.identifier {
